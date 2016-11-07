@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class daftar_keg extends AppCompatActivity {
 
     private DatePicker datePicker;
     private Calendar calendar;

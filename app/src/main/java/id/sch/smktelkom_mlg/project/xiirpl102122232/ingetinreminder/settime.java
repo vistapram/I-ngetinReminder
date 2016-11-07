@@ -1,19 +1,14 @@
 package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
-import android.app.TimePickerDialog;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.TimePicker;
-import java.util.Calendar;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class MainActivity extends Activity {
+import java.util.Calendar;
+
+public class settime extends Activity {
     private TimePicker timePicker1;
     private TextView time;
     private Calendar calendar;
