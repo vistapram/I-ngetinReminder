@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="date_label">Tekan tombol untuk mengatur tanggal</string>
+    <string name="date_button">Atur Tanggal</string>
+    <string name="date_view">Tanggal : </string>
+    <string name="date_selected"></string>
+</resources>
