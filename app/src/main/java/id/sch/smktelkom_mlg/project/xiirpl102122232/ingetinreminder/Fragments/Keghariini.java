@@ -12,12 +12,12 @@ import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Storage.OnFragmentInteractionListener} interface
+ * {@link Keghariini.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Storage#newInstance} factory method to
+ * Use the {@link Keghariini#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Storage extends Fragment {
+public class Keghariini extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class Storage extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Storage() {
+    public Keghariini() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class Storage extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Storage.
+     * @return A new instance of fragment Keghariini.
      */
     // TODO: Rename and change types and number of parameters
-    public static Storage newInstance(String param1, String param2) {
-        Storage fragment = new Storage();
+    public static Keghariini newInstance(String param1, String param2) {
+        Keghariini fragment = new Keghariini();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +64,7 @@ public class Storage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_storage, container, false);
+        return inflater.inflate(R.layout.fragment_keghariini, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
