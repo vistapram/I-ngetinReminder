@@ -9,10 +9,10 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 
 public class settime extends Activity {
-    private TimePicker timePicker1;
-    private TextView time;
-    private Calendar calendar;
-    private String format = "";
+    TimePicker timePicker1;
+    TextView time;
+    Calendar calendar;
+    String format = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
