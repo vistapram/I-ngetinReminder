@@ -1,13 +1,18 @@
 package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import java.util.Calendar;
+
+//iki skrip e cek pas ngatur jam ambek tanggal iso pop up, tapi yo iku, gak muncul :V
 public class tambah_keg extends AppCompatActivity {
     static final int TIME_DIALOG_ID = 1;
     // variables to save user selected date and time
@@ -27,6 +32,27 @@ public class tambah_keg extends AppCompatActivity {
         }
     };
 
+    private DatePicker datePicker;
+    private Calendar calendar;
+    private TextView dateView;
+    private int year, month, day;
+    private DatePickerDialog.OnDateSetListener myDateListener = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker arg0, int arg1, int arg2, int arg3) {
+            // TODO Auto-generated method stub
+            // arg1 = year
+            // arg2 = month
+            // arg3 = day
+            showDate(arg1, arg2 + 1, arg3);
+        }
+    };
+
+    private void showDate(int arg1, int i, int arg3) {
+        dateView.setText(new StringBuilder().append(day).append("/")
+                .append(month).append("/").append(year));
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +60,13 @@ public class tambah_keg extends AppCompatActivity {
         btnwaktu = (Button) findViewById(R.id.btnwaktu);
         etwaktu = (TextView) findViewById(R.id.etwaktu);
 
+        dateView = (TextView) findViewById(R.id.textView3);
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        showDate(year, month + 1, day);
     }
 
     @Override
