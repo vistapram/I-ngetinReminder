@@ -1,4 +1,4 @@
-package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
+package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
+
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.R;
 
 //iki skrip e cek pas ngatur jam ambek tanggal iso pop up, tapi yo iku, gak muncul :V
 public class tambah_keg extends AppCompatActivity {
