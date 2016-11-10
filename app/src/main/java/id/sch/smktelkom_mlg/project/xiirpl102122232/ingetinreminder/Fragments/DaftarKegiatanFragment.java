@@ -1,4 +1,4 @@
-package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
+package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.DaftarKegiatanAdapter;
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.R;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.dummy.DummyContent.DummyItem;
 
 /**
@@ -57,7 +59,7 @@ public class DaftarKegiatanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_daftarkegiatan_layout, container, false);
+        View view = inflater.inflate(R.layout.fragment_daftarkegiatan, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -74,22 +76,22 @@ public class DaftarKegiatanFragment extends Fragment {
     }
 
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnListFragmentInteractionListener) {
-            mListener = (OnListFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnListFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+//        if (context instanceof OnListFragmentInteractionListener) {
+//            mListener = (OnListFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnListFragmentInteractionListener");
+//        }
+//    }
+//
+//    @Override
+//    public void onDetach() {
+//        super.onDetach();
+//        mListener = null;
+//    }
 
     /**
      * This interface must be implemented by activities that contain this
