@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.DaftarKegiatanFragment;
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Database.DBController;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Keghariini;
 
 
@@ -25,6 +25,15 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        DBController db = new DBController(this);
+
+// Inserting Shop/Rows
+        //Log.d("Insert: ", "Inserting ..");
+        /*ERROR BAGIAN INI
+        //db.insert(new Reminder("R1", "Berjemur", "21 Dese mber 2016", "07:00", "abc", "AKUAA"));*/
+
+
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -96,9 +105,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_kegharini:
                 fragment = new Keghariini();
                 break;
-            case R.id.nav_dftrkeg:
-                fragment = new DaftarKegiatanFragment();
-                break;
+            // case R.id.nav_dftrkeg:
+            //   fragment = new DaftarKegiatanFragment();
+            //  break;
         }
             if (fragment != null) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
