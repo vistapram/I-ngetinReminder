@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,9 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Keghariini;
-
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -36,10 +37,11 @@ public class MainActivity extends AppCompatActivity
         displaySelectedScreen(R.id.nav_kegharini);
 
 
-// Inserting Shop/Rows
-        //Log.d("Insert: ", "Inserting ..");
-        /*ERROR BAGIAN INI
-        //db.insert(new Reminder("R1", "Berjemur", "21 Dese mber 2016", "07:00", "abc", "AKUAA"));*/
+        /*Operation Code Database
+        Inserting Shop/Rows
+        Log.d("Insert: ", "Inserting ..");
+        ERROR BAGIAN INI
+        db.insert(new Reminder("R1", "Berjemur", "21 Dese mber 2016", "07:00", "abc", "AKUAA"));*/
 
 
 
@@ -52,6 +54,12 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
+        findViewById(R.id.moveButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, DafkegRecycler.class));
+            }
+        });
 
     }
 
@@ -114,12 +122,9 @@ public class MainActivity extends AppCompatActivity
                 ft.replace(R.id.content_frame, fragment);
                 ft.commit();
             }
-
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
-
 }
-
 
 //    private void showpage(int id) {
 //        Fragment fragment = null;

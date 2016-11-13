@@ -15,6 +15,13 @@
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/moveButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="MOVE" />
+    </FrameLayout>
 </RelativeLayout>
 

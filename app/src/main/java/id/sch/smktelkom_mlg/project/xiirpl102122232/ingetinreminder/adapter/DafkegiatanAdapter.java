@@ -27,7 +27,7 @@ public class DafkegiatanAdapter extends RecyclerView.Adapter<DafkegiatanAdapter.
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_recycler, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_dafkeg_recycler, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
