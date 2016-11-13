@@ -12,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Database.DBController;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Keghariini;
 
 
@@ -26,7 +25,16 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DBController db = new DBController(this);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        displaySelectedScreen(R.id.nav_kegharini);
+
 
 // Inserting Shop/Rows
         //Log.d("Insert: ", "Inserting ..");
@@ -44,15 +52,7 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        displaySelectedScreen(R.id.nav_kegharini);
     }
 
     @Override
@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_kegharini:
                 fragment = new Keghariini();
                 break;
-            // case R.id.nav_dftrkeg:
-            //   fragment = new DaftarKegiatanFragment();
-            //  break;
+            /*case R.id.nav_dftrkeg:
+                fragment = new DaftarKegiatanFragment();
+            break;*/
         }
             if (fragment != null) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
