@@ -1,56 +1,82 @@
 package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
-import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
 
-public class settime extends Activity {
-    TimePicker timePicker1;
-    TextView time;
-    Calendar calendar;
-    String format = "";
+public class settime extends AppCompatActivity implements View.OnClickListener {
+
+    Button btnDatePicker, btnTimePicker;
+    EditText txtDate, txtTime;
+    private int mYear, mMonth, mDay, mHour, mMinute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
-        time = (TextView) findViewById(R.id.textView1);
-        calendar = Calendar.getInstance();
+        btnDatePicker = (Button) findViewById(R.id.btn_date);
+        btnTimePicker = (Button) findViewById(R.id.btn_time);
+        txtDate = (EditText) findViewById(R.id.in_date);
+        txtTime = (EditText) findViewById(R.id.in_time);
 
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        int min = calendar.get(Calendar.MINUTE);
-        showTime(hour, min);
+        btnDatePicker.setOnClickListener(this);
+        btnTimePicker.setOnClickListener(this);
+
     }
 
-    public void setTime(View view) {
-        int hour = timePicker1.getCurrentHour();
-        int min = timePicker1.getCurrentMinute();
-        showTime(hour, min);
-    }
+    @Override
+    public void onClick(View v) {
 
-    public void showTime(int hour, int min) {
-        if (hour == 0) {
-            hour += 12;
-            format = "AM";
-        } else if (hour == 12) {
-            format = "PM";
-        } else if (hour > 12) {
-            hour -= 12;
-            format = "PM";
-        } else {
-            format = "AM";
+        if (v == btnDatePicker) {
+
+            // Get Current Date
+            final Calendar c = Calendar.getInstance();
+            mYear = c.get(Calendar.YEAR);
+            mMonth = c.get(Calendar.MONTH);
+            mDay = c.get(Calendar.DAY_OF_MONTH);
+
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                    new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+
+                            txtDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    }, mYear, mMonth, mDay);
+            datePickerDialog.show();
         }
+        if (v == btnTimePicker) {
 
-        time.setText(new StringBuilder().append(hour).append(" : ").append(min)
-                .append(" ").append(format));
+            // Get Current Time
+            final Calendar c = Calendar.getInstance();
+            mHour = c.get(Calendar.HOUR_OF_DAY);
+            mMinute = c.get(Calendar.MINUTE);
+
+            // Launch Time Picker Dialog
+            TimePickerDialog timePickerDialog = new TimePickerDialog(this,
+                    new TimePickerDialog.OnTimeSetListener() {
+
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay,
+                                              int minute) {
+
+                            txtTime.setText(hourOfDay + ":" + minute);
+                        }
+                    }, mHour, mMinute, false);
+            timePickerDialog.show();
+        }
     }
-
-
 }
-
