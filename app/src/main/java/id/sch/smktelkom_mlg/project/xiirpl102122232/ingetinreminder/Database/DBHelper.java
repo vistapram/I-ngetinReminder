@@ -19,17 +19,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String ROW_WAKTU = "waktu";
     public static final String ROW_FILE = "file";
     public static final String ROW_KET = "keterangan";
-
     // Database Information
     static final String DB_NAME = "reminder.db";
-
     // database version
     static final int DB_VERSION = 1;
-
     // Creating table query
     private static final String CREATE_TABLE = "CREATE TABLE " + DB_NAME + " ( " +
             ROW_ID + " VARCHAR, " + ROW_NAMAKEG + " VARCHAR, " + ROW_TGLKEG + " DATE, "  + ROW_WAKTU + " TIME, "  + ROW_FILE + " VARCHAR, " + ROW_KET + " VARCHAR)";
-
 
     public DBHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);

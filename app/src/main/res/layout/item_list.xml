@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/a" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:alpha="0.3"
+        android:background="#424242" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:id="@+id/textViewJudul"
+        tools:text="Judul"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+</RelativeLayout>
+

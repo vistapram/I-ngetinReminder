@@ -30,8 +30,9 @@ public class DBController {
         dbHelper.close();
     }
 
-    public void insert(String name, String tanggal, String waktu, String file, String ket) {
+    public void insert(Reminder reminder, String _id, String name, String tanggal, String waktu, String file, String ket) {
         ContentValues contentValue = new ContentValues();
+        contentValue.put(DBHelper.ROW_ID, _id);
         contentValue.put(DBHelper.ROW_NAMAKEG, name);
         contentValue.put(DBHelper.ROW_TGLKEG, tanggal);
         contentValue.put(DBHelper.ROW_WAKTU, waktu);
@@ -51,7 +52,7 @@ public class DBController {
         return cursor;
     }
 
-    public int update(long _id, String name, String tanggal, String waktu, String file, String ket) {
+    public int update(String _id, String name, String tanggal, String waktu, String file, String ket) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(DBHelper.ROW_NAMAKEG, name);
         contentValues.put(DBHelper.ROW_TGLKEG, tanggal);
@@ -62,7 +63,7 @@ public class DBController {
         return i;
     }
 
-    public void delete(long _id) {
+    public void delete(String _id) {
         database.delete(DBHelper.TABLE_NAME, DBHelper.ROW_ID + "=" + _id, null);
     }
 }
