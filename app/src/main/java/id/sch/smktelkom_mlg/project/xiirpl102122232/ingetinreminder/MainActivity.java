@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Keghariini;
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.StorageActivity;
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Tambah_Keg;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -113,9 +115,12 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_kegharini:
                 fragment = new Keghariini();
                 break;
-            /*case R.id.nav_dftrkeg:
-                fragment = new DaftarKegiatanFragment();
-            break;*/
+            case R.id.nav_tmbhkeg:
+                fragment = new Tambah_Keg();
+                break;
+            case R.id.nav_penyimpanan:
+            fragment = new StorageActivity();
+            break;
         }
             if (fragment != null) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();

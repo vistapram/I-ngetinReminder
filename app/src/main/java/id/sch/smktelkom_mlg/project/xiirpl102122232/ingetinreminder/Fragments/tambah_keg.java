@@ -3,8 +3,14 @@ package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
@@ -15,12 +21,14 @@ import java.util.Calendar;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.R;
 
 //iki skrip e cek pas ngatur jam ambek tanggal iso pop up, tapi yo iku, gak muncul :V
-public class tambah_keg extends AppCompatActivity {
+public class Tambah_Keg extends Fragment {
     static final int TIME_DIALOG_ID = 1;
     // variables to save user selected date and time
     public int hour, minute;
     Button btnwaktu;
     TextView etwaktu;
+    View view;
+    Context context;
     // declare  the variables to Show/Set the date and time when Time and  Date Picker Dialog first appears
     private int mHour, mMinute;
     // Register  TimePickerDialog listener
@@ -56,27 +64,32 @@ public class tambah_keg extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btnwaktu = (Button) findViewById(R.id.btnwaktu);
-        etwaktu = (TextView) findViewById(R.id.etwaktu);
+    }
 
-        dateView = (TextView) findViewById(R.id.textView3);
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.Tambah_keg, container, false);
+        context = getContext();
+        btnwaktu = (Button) view.findViewById(R.id.btnwaktu);
+        etwaktu = (TextView) view.findViewById(R.id.etwaktu);
+
+        dateView = (TextView) view.findViewById(R.id.textView3);
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
 
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
         showDate(year, month + 1, day);
-    }
-
-    @Override
+        return view;
+}
     protected Dialog onCreateDialog(int id) {
         switch (id) {
             // create a new TimePickerDialog with values you want to show
             case TIME_DIALOG_ID:
-                return new TimePickerDialog(this, mTimeSetListener, mHour, mMinute, false);
+                return new TimePickerDialog(context, mTimeSetListener, mHour, mMinute, false);
 
         }
         return null;
