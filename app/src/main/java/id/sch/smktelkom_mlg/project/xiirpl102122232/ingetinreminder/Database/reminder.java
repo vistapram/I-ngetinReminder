@@ -4,7 +4,7 @@ package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Database;
  * Created by Naufal Ramaputra on 13/11/2016.
  */
 
-public class Reminder {
+public class reminder {
     private String _id;
     private String namakeg;
     private String tglkeg;
@@ -12,7 +12,7 @@ public class Reminder {
     private String file;
     private String ket;
 
-    public Reminder(String _id, String namakeg, String tglkeg, String waktu,
+    public reminder(String _id, String namakeg, String tglkeg, String waktu,
                     String file, String ket) {
         this._id = _id;
         this.namakeg = namakeg;
