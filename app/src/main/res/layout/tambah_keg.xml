@@ -97,31 +97,31 @@
             android:text="Selasa" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/rabu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rabu" />
 
         <CheckBox
-            android:id="@+id/checkBox5"
+            android:id="@+id/kamis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kamis" />
 
         <CheckBox
-            android:id="@+id/checkBox6"
+            android:id="@+id/jumat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jumat" />
 
         <CheckBox
-            android:id="@+id/checkBox7"
+            android:id="@+id/sabtu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sabtu" />
 
         <CheckBox
-            android:id="@+id/checkBox8"
+            android:id="@+id/minggu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Minggu" />
