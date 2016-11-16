@@ -17,11 +17,11 @@ import java.util.Calendar;
 
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.R;
 
-public class tambah_keg extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class tambah_keg extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener, View.OnClickListener {
     EditText etnama, etcatatan;
     CheckBox senin, selasa, rabu, kamis, jumat, sabtu, minggu;
     Button button;
-    TextView ulangi;
+    TextView result, req, jumlah, kelas, ulangi;
     Button btnDatePicker, btnTimePicker;
     EditText txtDate, txtTime;
     private int mYear, mMonth, mDay, mHour, mMinute;
@@ -29,8 +29,7 @@ public class tambah_keg extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.tambah_keg);
         etnama = (EditText) findViewById(R.id.etnama);
         etcatatan = (EditText) findViewById(R.id.etcatatan);
         senin = (CheckBox) findViewById(R.id.senin);
@@ -84,6 +83,7 @@ public class tambah_keg extends AppCompatActivity implements View.OnClickListene
 
         ulangi.setText(ulang);
     }
+
 
     private boolean isValid() {
         boolean valid = true;
