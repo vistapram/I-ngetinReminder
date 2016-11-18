@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
-    android:padding="16dp">
-
-
-    <TextView
-        android:id="@+id/textViewNamaKegiatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        tools:text="Judul" />
+    android:layout_marginBottom="3dp"
+    android:layout_marginTop="3dp"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    app:cardBackgroundColor="@android:color/holo_orange_light">
 
-    <TextView
-        android:id="@+id/textViewKeterangan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewNamaKegiatan"
-        android:layout_alignStart="@+id/textViewNamaKegiatan"
-        android:layout_below="@+id/textViewNamaKegiatan"
-        android:ellipsize="end"
-        android:maxLines="2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        tools:text="Deskripsi" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textViewNamaKegiatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            tools:text="Judul" />
+
+        <TextView
+            android:id="@+id/textViewKeterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewNamaKegiatan"
+            android:layout_alignStart="@+id/textViewNamaKegiatan"
+            android:layout_below="@+id/textViewNamaKegiatan"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Deskripsi" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

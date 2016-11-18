@@ -27,6 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, 1);
         if (Build.VERSION.SDK_INT >= 15) {
+            //error
             DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
         } else {
             DB_PATH = Environment.getDataDirectory() + "/data/" + context.getPackageName() + "/databases/";

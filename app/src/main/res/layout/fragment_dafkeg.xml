@@ -1,0 +1,108 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment_dafkeg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Dafkeg">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/senin"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="SENIN"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/selasa"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="SELASA"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/rabu"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="RABU"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/kamis"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="KAMIS"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/jumat"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="JUMAT"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/sabtu"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="SABTU"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/minggu"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="MINGGU"
+                android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>
