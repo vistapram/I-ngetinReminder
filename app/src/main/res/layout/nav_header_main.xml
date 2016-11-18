@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/view_container"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="@dimen/nav_header_height"
     android:background="@color/colorPrimaryDark"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -12,47 +11,41 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:id="@+id/view_container"
     >
 
+    <ImageView
+        android:id="@+id/imageViewBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:srcCompat="@drawable/logoo" />
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/img_profile"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:srcCompat="@android:drawable/sym_def_app_icon"/>
+        <TextView
+            android:id="@+id/TextViewNama"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:minHeight="45dp"
-            android:minWidth="45dp"
-            android:tint="@android:color/background_light"
-            app:srcCompat="@drawable/ic_content_paste_black_24dp" />
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Android Studio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
             android:id="@+id/remind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@+id/img_profile"
-            android:layout_toRightOf="@+id/img_profile"
-            android:text="Remind's you everyday"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Remind's you everyday" />
 
-        <TextView
-            android:id="@+id/TextViewNama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/remind"
-            android:layout_alignLeft="@+id/remind"
-            android:layout_alignStart="@+id/remind"
-            android:text="I-Ngetin Reminder"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/background_light" />
-
-    </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

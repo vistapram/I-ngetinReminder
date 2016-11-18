@@ -31,4 +31,12 @@
         <item>Berangkat Les bimbingan belajar jam 16.00</item>
         <item>Tidur tepat pukul 19.30</item>
     </string-array>
+    <array name="places_picture">
+        <item>@drawable/a</item>
+        <item>@drawable/b</item>
+        <item>@drawable/c</item>
+        <item>@drawable/d</item>
+        <item>@drawable/e</item>
+        <item>@drawable/f</item>
+    </array>
 </resources>

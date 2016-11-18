@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,9 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Dafkeg;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Keghariini;
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.TambahKeg;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -36,6 +38,14 @@ public class MainActivity extends AppCompatActivity
         displaySelectedScreen(R.id.nav_kegharini);
 
 
+        /*Operation Code Database
+        Inserting Shop/Rows
+        Log.d("Insert: ", "Inserting ..");
+        ERROR BAGIAN INI
+        db.insert(new Reminder("R1", "Berjemur", "21 Dese mber 2016", "07:00", "abc", "AKUAA"));*/
+
+
+
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -44,6 +54,13 @@ public class MainActivity extends AppCompatActivity
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
+        findViewById(R.id.moveButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, DafkegRecycler.class));
+            }
+        });
 
     }
 
@@ -71,6 +88,7 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -96,8 +114,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_kegharini:
                 fragment = new Keghariini();
                 break;
-            case R.id.nav_dftrkeg:
-                fragment = new Dafkeg();
+            /*case R.id.nav_dftrkeg:
+                fragment = new DaftarKegiatanFragment();
+            break;*/
+            case R.id.nav_tmbhkeg:
+                fragment = new TambahKeg();
                 break;
         }
             if (fragment != null) {

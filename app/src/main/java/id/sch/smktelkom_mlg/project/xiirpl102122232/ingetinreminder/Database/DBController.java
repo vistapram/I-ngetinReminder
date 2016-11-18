@@ -30,7 +30,7 @@ public class DBController {
         dbHelper.close();
     }
 
-    public void insert(Reminder reminder, String _id, String name, String tanggal, String waktu, String file, String ket) {
+    public void insert(reminder reminder, String _id, String name, String tanggal, String waktu, String file, String ket) {
         ContentValues contentValue = new ContentValues();
         contentValue.put(DBHelper.ROW_ID, _id);
         contentValue.put(DBHelper.ROW_NAMAKEG, name);
