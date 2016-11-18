@@ -30,7 +30,7 @@ public class DBController {
         dbHelper.close();
     }
 
-    public void insert(reminder reminder, String _id, String name, String tanggal, String waktu, String file, String ket) {
+   /* public void insert(Reminder reminder, String _id, String name, String tanggal, String waktu, String file, String ket) {
         ContentValues contentValue = new ContentValues();
         contentValue.put(DBHelper.ROW_ID, _id);
         contentValue.put(DBHelper.ROW_NAMAKEG, name);
@@ -39,7 +39,7 @@ public class DBController {
         contentValue.put(DBHelper.ROW_FILE, file);
         contentValue.put(DBHelper.ROW_KET, ket);
         database.insert(DBHelper.TABLE_NAME, null, contentValue);
-    }
+    }*/
 
     public Cursor fetch() {
         String[] columns = new String[]{DBHelper.ROW_ID, DBHelper.ROW_NAMAKEG, DBHelper.ROW_TGLKEG, DBHelper.ROW_WAKTU, DBHelper.ROW_FILE,
