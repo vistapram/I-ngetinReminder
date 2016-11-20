@@ -3,9 +3,8 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_kegharini"
-            android:icon="@drawable/ic_class_black_24dp"
-            android:title="Kegiatan Hari Ini" />
+            android:id="@+id/keghariini"
+            android:title="Home" />
         <item
             android:id="@+id/nav_tmbhkeg"
             android:icon="@drawable/ic_add_circle_black_24dp"
@@ -16,8 +15,9 @@
             android:title="Daftar Kegiatan" />
         <item
             android:id="@+id/nav_penyimpanan"
-            android:icon="@drawable/ic_event_available_black_24dp"
-            android:title="Calendar" />
+            android:icon="@drawable/ic_archive_black_24dp"
+            android:title="Penyimpanan" />
+
     </group>
 
 </menu>

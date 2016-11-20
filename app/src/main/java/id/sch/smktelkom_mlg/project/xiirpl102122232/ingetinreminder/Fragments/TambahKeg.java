@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -31,8 +30,8 @@ public class TambahKeg extends Fragment implements View.OnClickListener, Compoun
     private String mParam2;
 
     private EditText etnama, etcatatan;
-    private CheckBox senin, selasa, rabu, kamis, jumat, sabtu, minggu;
-    private Button button;
+    //private CheckBox senin, selasa, rabu, kamis, jumat, sabtu, minggu;
+    private Button buttonTambah;
     private TextView ulangi;
     private Button btnDatePicker, btnTimePicker;
     private EditText txtDate, txtTime;
@@ -72,7 +71,7 @@ public class TambahKeg extends Fragment implements View.OnClickListener, Compoun
         context = getContext();
         etnama = (EditText) view.findViewById(R.id.etnama);
         etcatatan = (EditText) view.findViewById(R.id.etcatatan);
-        senin = (CheckBox) view.findViewById(R.id.senin);
+        /*senin = (CheckBox) view.findViewById(R.id.senin);
         selasa = (CheckBox) view.findViewById(R.id.selasa);
         rabu = (CheckBox) view.findViewById(R.id.rabu);
         kamis = (CheckBox) view.findViewById(R.id.kamis);
@@ -86,8 +85,9 @@ public class TambahKeg extends Fragment implements View.OnClickListener, Compoun
         kamis.setOnCheckedChangeListener(this);
         jumat.setOnCheckedChangeListener(this);
         sabtu.setOnCheckedChangeListener(this);
-        minggu.setOnCheckedChangeListener(this);
-        button = (Button) view.findViewById(R.id.button);
+        minggu.setOnCheckedChangeListener(this);*/
+
+        buttonTambah = (Button) view.findViewById(R.id.buttonTambah);
         btnDatePicker = (Button) view.findViewById(R.id.btn_date);
         btnTimePicker = (Button) view.findViewById(R.id.btn_time);
         txtDate = (EditText) view.findViewById(R.id.in_date);

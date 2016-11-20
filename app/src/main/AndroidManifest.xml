@@ -19,11 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".DafkegRecycler" />
-        <!--<activity android:name=".Fragments.CalendarActivity"></activity>-->
+        <!-- <activity android:name=".Fragments.StorageActivity"></activity> -->
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".ContentMain"></activity>
     </application>
 
 </manifest>

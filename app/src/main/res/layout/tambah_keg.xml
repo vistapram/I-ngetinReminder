@@ -12,6 +12,7 @@
             android:id="@+id/etnama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:ems="10"
             android:hint="Nama Kegiatan"
             android:inputType="text" />/>
@@ -34,106 +35,54 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin">
 
-            <EditText
-                android:id="@+id/in_date"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:hint="9-11-17" />
-
             <Button
                 android:id="@+id/btn_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_alignBottom="@+id/in_date"
+                android:layout_marginLeft="20dp"
                 android:layout_toEndOf="@+id/in_date"
                 android:layout_toRightOf="@+id/in_date"
-                android:background="@color/colorPrimary"
-                android:text="Tanggal" />
-
-            <EditText
-                android:id="@+id/in_time"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/in_date"
-                android:layout_marginTop="10dp"
-                android:hint="09 : 30" />
+                android:background="@drawable/kalender" />
 
             <Button
                 android:id="@+id/btn_time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_alignLeft="@+id/btn_date"
                 android:layout_alignStart="@+id/btn_date"
                 android:layout_below="@+id/btn_date"
                 android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
-                android:text="Waktu" />
+                android:background="@drawable/jam" />
+
+            <EditText
+                android:id="@+id/in_date"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/in_time"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/in_time"
+                android:hint="9-11-17" />
+
+            <EditText
+                android:id="@+id/in_time"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/btn_time"
+                android:hint="09 : 30" />
         </RelativeLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Ulangi"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_dark"
-            android:textStyle="bold" />
-
-        <CheckBox
-            android:id="@+id/senin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Senin" />
-
-        <CheckBox
-            android:id="@+id/selasa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Selasa" />
-
-        <CheckBox
-            android:id="@+id/rabu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rabu" />
-
-        <CheckBox
-            android:id="@+id/kamis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kamis" />
-
-        <CheckBox
-            android:id="@+id/jumat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jumat" />
-
-        <CheckBox
-            android:id="@+id/sabtu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sabtu" />
-
-        <CheckBox
-            android:id="@+id/minggu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Minggu" />
-
-
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:id="@+id/buttonTambah"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimaryDark"
-            android:text="Tambahkan"
+            android:onClick="onClick (tambah_keg)"
+            android:text="Tambahkan Kegiatan"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 

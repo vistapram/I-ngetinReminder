@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -19,6 +20,14 @@ import java.io.OutputStream;
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    // Table Name
+    public static final String TABLE_NAME = "kegiatan";
+    // Table columns
+    public static final String ROW_ID = "_id";
+    public static final String ROW_NAMAKEG = "nama";
+    public static final String ROW_TGLKEG = "tanggal";
+    public static final String ROW_WAKTU = "waktu";
+    public static final String ROW_KET = "keterangan";
     private static String DB_NAME = "reminder.sqlite";
     private static String DB_PATH = "";
     private final Context myContext;
@@ -104,5 +113,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Cursor QueryData(String query) {
         return myDatabase.rawQuery(query, null);
 
+    }
+
+    public void insert(String name, String tanggal, String waktu, String ket) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ROW_NAMAKEG, name);
+        contentValues.put(ROW_TGLKEG, tanggal);
+        contentValues.put(ROW_WAKTU, waktu);
+        contentValues.put(ROW_KET, ket);
+        myDatabase.insert(TABLE_NAME, null, contentValues);
+
+    }
+
+    public String[] getArray(int id) {
+        Cursor cursor = myDatabase.rawQuery("select * from " + TABLE_NAME + " where " + ROW_ID + " = \"" + id + "\" ", null);
+
+        String[] eminem = new String[cursor.getColumnCount()];  // looping through all rows and adding to list
+
+        try {
+            if (cursor != null) {
+                if (cursor.moveToFirst()) {
+                    do {
+                        for (int i = 1; i < cursor.getColumnCount(); i++) {
+                            eminem[i - 1] = cursor.getString(i);
+                        }
+                    } while (cursor.moveToNext());
+                }
+            }
+        } catch (Error e) {
+
+        }
+
+        cursor.close();
+        return eminem;
     }
 }
