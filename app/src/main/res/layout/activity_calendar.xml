@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.MainActivity"
-    android:background="#3fb399"
+    android:background="#dc7474"
     android:orientation="vertical"
     android:gravity="center"
     android:weightSum="1">
@@ -31,7 +31,7 @@
         android:text="July"
         android:textSize="24sp"
         android:textColor="#ffffff"
-        android:background="#206757"
+        android:background="#c72c2c"
         android:gravity="center"
         android:layout_marginTop="40dp"/>
 
@@ -42,7 +42,7 @@
         android:layout_height="200dp"
         android:text="3"
         android:textSize="56sp"
-        android:textColor="#206757"
+        android:textColor="#c72c2c"
         android:background="#ffffff"
         android:gravity="center"/>
     <TextView
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="Sun"
         android:textSize="18sp"
-        android:textColor="#206757"
+        android:textColor="#c72c2c"
         android:layout_marginTop="-40dp"
         android:layout_marginLeft="80dp"/>
 
@@ -61,7 +61,7 @@
         android:layout_height="150dp"
         android:text="Kegiatan"
         android:textSize="18sp"
-        android:textColor="#206757"
+        android:textColor="#c72c2c"
         android:background="#ffffff"
         android:gravity="left"/>
 
