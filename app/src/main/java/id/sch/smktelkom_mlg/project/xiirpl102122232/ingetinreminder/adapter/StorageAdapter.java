@@ -51,8 +51,8 @@ public class StorageAdapter extends RecyclerView.Adapter<StorageAdapter.ViewHold
         TextView tvDeskripsi;
         public ViewHolder(View itemView) {
             super(itemView);
-            ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
-            tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
+            //      ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
+            //    tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
         }
     }
 }

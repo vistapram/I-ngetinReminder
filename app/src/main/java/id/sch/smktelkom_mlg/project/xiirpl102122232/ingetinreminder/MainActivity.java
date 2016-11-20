@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Dafkeg;
-import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Keghariini;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.TambahKeg;
 
 public class MainActivity extends AppCompatActivity
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        displaySelectedScreen(R.id.nav_kegharini);
+        displaySelectedScreen(R.id.keghariini);
 
     }
 
@@ -65,6 +64,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         displaySelectedScreen(item.getItemId());
@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
 
         switch (itemId) {
-            case R.id.nav_kegharini:
-                fragment = new Keghariini();
+            case R.id.keghariini:
+                fragment = new ContentMain();
                 break;
             case R.id.nav_dftrkeg:
                 fragment = new Dafkeg();
