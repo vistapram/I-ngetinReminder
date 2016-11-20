@@ -1,34 +1,34 @@
 # I-ngetinReminder
 
-##Nama App
+## Nama App
 
 * Nama Aplikasi : I-ngetinReminder
 
-##Penjelasan Aplikasi
+## Penjelasan Aplikasi
 
 * Penjelasan Aplikasi : Aplikasi yang membantu penggunanya untuk mengingat hal -hal yang harus dilakukan, karena pengguna akan diingatkan oleh aplikasi ini sebelum melakukan hal tersebut dan akan menyimpan kegiatan-kegiatan apa saja yang telah dan belum dilakukan pengguna
 
-##Screenshoot Aplikasi
+## Screenshoot Aplikasi
 1. 
 2. 
 3. 
 4. 
 5. 
 
-##Lampiran Video
+## Lampiran Video
 
 * Video Aplikasi : 
 
-##Lampiran File APK
+## Lampiran File APK
 
 * Link File Apk dari Aplikasi :
 
-##Identitas Anggota Kelompok
+## Identitas Anggota Kelompok
 
 * Nama : Afista Pramudya Wardhani 
 * Kelas : XIIRPL1 
 * No Urut: 02 
-* NIS : 
+* NIS : 4105/1170.070
 * User : vistapram
 
 * Nama : Cahyaningrum Argyanti Wijanarko
@@ -40,14 +40,15 @@
 * Nama : Iman Naufal Faruq Ramaputra
 * Kelas : XIIRPL1 
 * No Urut: 22
-* NIS : 
+* NIS : 4358/1256.063
 * User : naufalramaputra 
 
 * Nama : Nindi Aditamitamala
 * Kelas : XIIRPL1 
 * No Urut: 32
-* NIS : 
+* NIS : 4403/1301.070
 * User : nindiaditamitamala
 
 
-##Nama Sekolah : SMK Telkom Malang 
+## Nama Sekolah
+* SMK Telkom Malang 
