@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DafkegRecycler" />
-        <!--<activity android:name=".Fragments.StorageActivity"></activity>-->
+        <!--<activity android:name=".Fragments.CalendarActivity"></activity>-->
 
         <meta-data
             android:name="com.google.android.gms.version"

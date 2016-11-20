@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.CalendarActivity;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Dafkeg;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Keghariini;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.TambahKeg;
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, about.class);
+            startActivity(intent);
             return true;
         }
 
@@ -83,6 +87,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_tmbhkeg:
                 fragment = new TambahKeg();
+                break;
+            case R.id.nav_penyimpanan:
+                fragment = new CalendarActivity();
                 break;
         }
             if (fragment != null) {

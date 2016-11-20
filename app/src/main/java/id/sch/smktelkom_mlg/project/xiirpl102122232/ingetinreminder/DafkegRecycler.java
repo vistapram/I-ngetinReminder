@@ -8,14 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
-
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
-
 import java.util.ArrayList;
-
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.adapter.DafkegiatanAdapter;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.model.Item;
 

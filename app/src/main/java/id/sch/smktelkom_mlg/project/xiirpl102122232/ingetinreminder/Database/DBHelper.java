@@ -28,6 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
             ROW_ID + " VARCHAR, " + ROW_NAMAKEG + " VARCHAR, " + ROW_TGLKEG + " DATE, "  + ROW_WAKTU + " TIME, "  + ROW_FILE + " VARCHAR, " + ROW_KET + " VARCHAR)";
 
     public DBHelper(Context context) {
+
         super(context, DB_NAME, null, DB_VERSION);
     }
 
