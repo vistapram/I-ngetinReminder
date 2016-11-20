@@ -66,4 +66,6 @@ public class DBController {
     public void delete(String _id) {
         database.delete(DBHelper.TABLE_NAME, DBHelper.ROW_ID + "=" + _id, null);
     }
+
+
 }
