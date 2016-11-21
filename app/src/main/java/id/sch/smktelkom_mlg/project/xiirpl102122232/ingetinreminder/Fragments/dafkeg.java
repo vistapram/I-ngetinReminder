@@ -3,15 +3,36 @@ package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.DafkegRecycler;
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.DatabaseHelper;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.R;
+import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.model.Item;
 
 
 public class Dafkeg extends Fragment {
