@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,10 +30,12 @@ public class ContentMain extends Fragment {
     private MainContentAdapter mAdapter;
     private DatabaseHelper databaseHelper;
     private Cursor cursor;
+    private FloatingActionButton fab;
     private GoogleApiClient client;
 
-    private void loadDatabase() {
-        databaseHelper = new DatabaseHelper(context);
+
+    public void loadDatabase() {
+        databaseHelper = new DatabaseHelper(context, "reminder", null, 1);
         databaseHelper.checkAndCopyDatabase();
         databaseHelper.openDatabase();
         cursor = databaseHelper.QueryData("select * from kegiatan");

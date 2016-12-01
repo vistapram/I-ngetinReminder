@@ -28,7 +28,7 @@ public class DafkegRecycler extends AppCompatActivity {
 
 
     private void loadDatabase() {
-        databaseHelper = new DatabaseHelper(this);
+        databaseHelper = new DatabaseHelper(this, "reminder", null, 1);
         databaseHelper.checkAndCopyDatabase();
         databaseHelper.openDatabase();
         cursor = databaseHelper.QueryData("select * from kegiatan");

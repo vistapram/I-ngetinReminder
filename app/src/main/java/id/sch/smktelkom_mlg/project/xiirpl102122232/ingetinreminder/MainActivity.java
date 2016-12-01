@@ -2,6 +2,7 @@ package id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,10 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.CalendarActivity;
 import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.Dafkeg;
-import id.sch.smktelkom_mlg.project.xiirpl102122232.ingetinreminder.Fragments.TambahKeg;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,7 +27,13 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, tambah_keg.class));
+            }
+        });
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -36,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         displaySelectedScreen(R.id.keghariini);
+
 
     }
 
@@ -60,7 +68,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, about.class);
+            Intent intent = new Intent(this, About.class);
             startActivity(intent);
             return true;
         }
@@ -75,7 +83,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void displaySelectedScreen(int itemId){
+    private void displaySelectedScreen(int itemId) {
         Fragment fragment = null;
 
         switch (itemId) {
@@ -85,21 +93,18 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_dftrkeg:
                 fragment = new Dafkeg();
                 break;
-            case R.id.nav_tmbhkeg:
-                fragment = new TambahKeg();
-                break;
             case R.id.nav_penyimpanan:
                 fragment = new CalendarActivity();
                 break;
         }
-            if (fragment != null) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.content_frame, fragment);
-                ft.commit();
-            }
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-}
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+    }
 
 
 }

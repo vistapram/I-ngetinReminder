@@ -23,17 +23,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Table Name
     public static final String TABLE_NAME = "kegiatan";
     // Table columns
-    public static final String ROW_ID = "_id";
-    public static final String ROW_NAMAKEG = "nama";
-    public static final String ROW_TGLKEG = "tanggal";
-    public static final String ROW_WAKTU = "waktu";
-    public static final String ROW_KET = "keterangan";
+    public static final String ROW_ID = "row_id";
+    public static final String ROW_NAMAKEG = "row_namakeg";
+    public static final String ROW_TGLKEG = "row_tglkeg";
+    public static final String ROW_WAKTU = "row_waktu";
+    public static final String ROW_KET = "row_ket";
     private static String DB_NAME = "reminder.sqlite";
     private static String DB_PATH = "";
     private final Context myContext;
     private SQLiteDatabase myDatabase;
 
-    public DatabaseHelper(Context context) {
+    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DB_NAME, null, 1);
         if (Build.VERSION.SDK_INT >= 15) {
             //error
@@ -121,7 +121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(ROW_TGLKEG, tanggal);
         contentValues.put(ROW_WAKTU, waktu);
         contentValues.put(ROW_KET, ket);
-        myDatabase.insert(TABLE_NAME, null, contentValues);
+        this.getWritableDatabase().insertOrThrow("kegiatan", "", contentValues);
 
     }
 

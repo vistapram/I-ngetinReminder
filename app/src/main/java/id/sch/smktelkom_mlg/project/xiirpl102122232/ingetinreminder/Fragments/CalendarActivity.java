@@ -110,7 +110,7 @@ public class CalendarActivity extends Fragment {
 
     //Load Database
     private void loadData() {
-        databaseHelper = new DatabaseHelper(getContext());
+        databaseHelper = new DatabaseHelper(context, "reminder", null, 1);
         databaseHelper.checkAndCopyDatabase();
         databaseHelper.openDatabase();
         cursor = databaseHelper.QueryData("select * from kegiatan");
