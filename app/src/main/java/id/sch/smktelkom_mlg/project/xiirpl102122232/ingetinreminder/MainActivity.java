@@ -68,8 +68,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, About.class);
-            startActivity(intent);
             return true;
         }
 
@@ -95,6 +93,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_penyimpanan:
                 fragment = new CalendarActivity();
+                break;
+            case R.id.nav_about:
+                fragment = new About();
                 break;
         }
         if (fragment != null) {

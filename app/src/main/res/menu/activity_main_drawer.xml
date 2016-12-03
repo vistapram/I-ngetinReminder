@@ -15,8 +15,12 @@
             android:title="Daftar Kegiatan" />
         <item
             android:id="@+id/nav_penyimpanan"
-            android:icon="@drawable/ic_archive_black_24dp"
-            android:title="Penyimpanan" />
+            android:icon="@drawable/ic_event_available_black_24dp"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="About" />
 
     </group>
 
