@@ -38,7 +38,7 @@ public class tambah_keg extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tambah_keg);
-
+        setTitle("Tambah Kegiatan");
         ctx = this;
         etnama = (EditText) findViewById(R.id.etnama);
         in_date = (EditText) findViewById(R.id.in_date);

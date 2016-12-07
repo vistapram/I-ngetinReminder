@@ -12,6 +12,7 @@ public class Splash extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
         Thread thread = new Thread() {
             public void run() {
                 try {

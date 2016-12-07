@@ -81,6 +81,7 @@ public class CalendarActivity extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle("Calendar");
         view = inflater.inflate(R.layout.activity_calendar, container, false);
         context = getContext();
         TextView yLabel = (TextView) view.findViewById(R.id.yLabel);
