@@ -19,6 +19,11 @@
 
 * Video Aplikasi : 
 
+![image](https://cloud.githubusercontent.com/assets/22116762/20975134/122753ca-bcd1-11e6-82bd-cf440cbed325.png)
+
+
+https://www.youtube.com/watch?v=wR7fvK1N44M
+
 ## Lampiran File APK
 
 * Link File Apk dari Aplikasi :
